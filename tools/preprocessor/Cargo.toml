@@ -1,0 +1,9 @@
+[package]
+name = "preprocessor"
+version = "0.1.0"
+authors = ["Erin Moon <erin@hecke.rs>"]
+edition = "2018"
+
+[dependencies]
+logos = "0.11"
+argh = "0.1"

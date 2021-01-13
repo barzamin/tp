@@ -1,7 +1,6 @@
 use crate::span::Spanned;
 use logos::{Lexer, Logos};
 use std::borrow::ToOwned;
-use std::ops::Range;
 
 // missing digraph handling because i don't care :)
 #[derive(Logos, Debug, Clone, PartialEq)]
@@ -16,7 +15,6 @@ pub enum Token<'a> {
     Dot,
     #[token(",")]
     Comma,
-    Arrow,
     #[token("{")]
     LCurly,
     #[token("}")]

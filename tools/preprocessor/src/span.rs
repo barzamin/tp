@@ -37,8 +37,8 @@ impl Into<std::ops::Range<usize>> for Span {
 // impl Index<
 #[derive(Debug, Clone)]
 pub struct Spanned<T> {
-    span: Span,
-    value: T,
+    pub span: Span,
+    pub value: T,
 }
 
 impl<T> Spanned<T> {
@@ -54,13 +54,6 @@ impl<T> Spanned<T> {
             value,
             span: Span::new(from, to),
         }
-    }
-
-    pub fn value(&self) -> &T {
-        &self.value
-    }
-    pub fn span(&self) -> &Span {
-        &self.span
     }
 }
 

@@ -21,9 +21,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
     // let src = include_str!("../../../include/d/d_save/d_save/d_save.h");
 
     let mut tokenizer = Tokenizer::new(&src);
-    while let Some(tok) = tokenizer.next() {
-        println!("{:?} - {}", &tok.value(), &src[tok.span().range()]);
-    }
+    let mut parser = parser::Parser::new(tokenizer);
+    println!("{:?}", parser.parse_call());
+    // while let Some(tok) = tokenizer.next() {
+    //     println!("{:?} - {}", &tok.value, &src[tok.span.range()]);
+    // }
 
     Ok(())
 }

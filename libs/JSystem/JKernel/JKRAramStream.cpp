@@ -1,57 +1,28 @@
 #include "JSystem/JKernel/JKRAramStream/JKRAramStream.h"
 #include "global.h"
 
-asm void JKRAramStream::create(long) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3B48.s"
-}
+/* fucky
+   wenis
+   */
 
-asm JKRAramStream::JKRAramStream(long) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3BB8.s"
-}
+INCLUDE_ASM(void JKRAramStream::create(long), "JSystem/JKernel/JKRAramStream", "func_802D3B48");
 
-asm JKRAramStream::~JKRAramStream() {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3C08.s"
-}
+INCLUDE_ASM(JKRAramStream::JKRAramStream(long), "JSystem/JKernel/JKRAramStream", "func_802D3BB8");
 
-asm void* JKRAramStream::run(void) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3C68.s"
-}
+INCLUDE_ASM(JKRAramStream::~JKRAramStream(), "JSystem/JKernel/JKRAramStream", "func_802D3C08");
 
-asm void JKRAramStream::readFromAram(void) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3CD8.s"
-}
+INCLUDE_ASM(void* JKRAramStream::run(void), "JSystem/JKernel/JKRAramStream", "func_802D3C68");
 
-asm void JKRAramStream::writeToAram(JKRAramStreamCommand*) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3CE0.s"
-}
+INCLUDE_ASM(void JKRAramStream::readFromAram(void), "JSystem/JKernel/JKRAramStream", "func_802D3CD8");
 
-asm void JKRAramStream::write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3ED0.s"
-}
+INCLUDE_ASM(void JKRAramStream::writeToAram(JKRAramStreamCommand*), "JSystem/JKernel/JKRAramStream", "func_802D3CE0");
 
-asm void JKRAramStream::sync(JKRAramStreamCommand*, int) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D3FA0.s"
-}
+INCLUDE_ASM(void JKRAramStream::write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*), "JSystem/JKernel/JKRAramStream", "func_802D3ED0");
 
-asm void JKRAramStream::setTransBuffer(u8*, u32, JKRHeap*) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D4034.s"
-}
+INCLUDE_ASM(void JKRAramStream::sync(JKRAramStreamCommand*, int), "JSystem/JKernel/JKRAramStream", "func_802D3FA0");
 
-asm JKRAramStreamCommand::JKRAramStreamCommand(void) {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D4088.s"
-}
+INCLUDE_ASM(void JKRAramStream::setTransBuffer(u8*, u32, JKRHeap*), "JSystem/JKernel/JKRAramStream", "func_802D4034");
 
-asm void JSURandomInputStream::getAvailable(void) const {
-    nofralloc
-#include "JSystem/JKernel/JKRAramStream/asm/func_802D4094.s"
-}
+INCLUDE_ASM(JKRAramStreamCommand::JKRAramStreamCommand(void), "JSystem/JKernel/JKRAramStream", "func_802D4088");
+
+INCLUDE_ASM(void JSURandomInputStream::getAvailable(void) const, "JSystem/JKernel/JKRAramStream", "func_802D4094");
